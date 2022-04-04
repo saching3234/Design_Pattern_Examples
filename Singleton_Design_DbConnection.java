@@ -3,7 +3,7 @@ package com.util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 
-public class DbConnection {
+public class Singleton_Design_DbConnection {
 	private static Connection con=null;	
 	
 	//method to get the connection object
