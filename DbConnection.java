@@ -4,19 +4,16 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class DbConnection {
-	static Connection con=null;
+	private static Connection con=null;	
 	
-	//main method to test 
-	public static void main(String[] args) {
-		System.out.println(mysqlConnectio());
-	}
-	
+	//method to get the connection object
 	public static Connection mysqlConnectio() {
+	    //checking if the connection already exist or not 	
 	      if(con==null) {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			String url="jdbc:mysql://localhost:3306/flightbooking";
-            con=DriverManager.getConnection(url,"root","root");
+                        con=DriverManager.getConnection(url,"root","root");
 			System.out.println("Connection to db successfull");			
 			
 		}catch(Exception ex) {
@@ -26,6 +23,13 @@ public class DbConnection {
 	   }
 	
 	   return con;
+	}
+	
+	
+    
+	//main method to test 
+	public static void main(String[] args) {
+		System.out.println(mysqlConnectio());
 	}
 
 }
