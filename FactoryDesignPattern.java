@@ -44,7 +44,7 @@ class MyCharacter implements MyWrapper{
     
 }
 
-//factory class for creating the object
+//factory class for creating the object of classes
 class MyFactory{
 
     public MyWrapper createWrapper(String s){
